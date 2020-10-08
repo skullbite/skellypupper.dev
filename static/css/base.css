@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+}
+.center-object {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: right;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    width: 99%
+}
+
+body {
+    background-color: rgb(29, 16, 34);
+}
+
+.info-box {
+    padding: 10px;
+    border: 5px #482955 solid;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.info-box img {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 40px;
+    max-width: 130px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.info-box .info-text {
+    float: right;
+    text-align: left;
+    display: inline;
+    word-wrap: break-word;
+    
+}
+.info-box .info-text a:hover {
+    color:var(--text-hover);
+
+}
+
+.showit {
+    display: inline-block;
+}
+
+.drop {
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    display: none;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 10px;
+    float: right;
+    border-radius: 10px;
+    overflow: hidden;
+} 
+
+.drop a {
+    text-decoration: none;
+    text-align: left;
+    margin-top: 10px;
+    padding: 13px 17px;
+
+}
+.drop i {
+    margin-right: 4px;
+}
+
+#drop-item:hover {
+    color:var(--text-hover);
+}
+
+.fab, .fas {
+    text-decoration: none;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    transition: 1s;
+    letter-spacing: 0px;
+    text-decoration: underline;
+}
+
+#hibiscus-button, #yoshi-button, #owopup-button, #spooderfy-button {
+    transition: 1s;
+}
+
+#hibiscus-button:hover {transition: 1s;color: var(--hibiscus)}#yoshi-button:hover {transition: 1s;color: var(--yoshi)}#owopup-button:hover {transition: 1s;color: var(--owopup)}#spooderfy-button:hover {transition: 1s;color: var(--spooderfy)}
+:root {
+    --text: rgb(204, 204, 204);
+    --hover-text: rgb(156, 156, 156);
+    --owopup: #3b851e;
+    --yoshi: #f16d7c;
+    --spooderfy: #1ed760;
+    --hibiscus: #f496c0;
+}

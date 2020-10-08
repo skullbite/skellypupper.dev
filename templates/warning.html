@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css">
+    </head>
+    <body>
+        <div class="center-object">
+            <h1 style="color: tomato;"><span style="font-size: 29px;color: tomato;" class="fas fa-exclamation-triangle"></span> {{ error }}</h1>
+            <p style="text-align: left;">{{ message | safe }}</p>
+        </div>
+    </body>
+</html>
