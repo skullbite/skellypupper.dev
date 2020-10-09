@@ -1,5 +1,5 @@
-# skellypupper.dev
+# 🌐 skellypupper.dev
 
 hey look at my stupid site
 
-for self hosting use fricki
+i made a json template for self hosting lol
