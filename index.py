@@ -1,29 +1,36 @@
 from flask import Flask, render_template, url_for, send_file, Request
 import logging, json, requests
 
-app = Flask(__name__)
-#log = logging.getLogger('werkzeug')
-#log.disabled = True
-
 try:
     config = json.load(open("config.json"))
 except:
-    print("augu make a config.json")
+    print("make a config.json dum dum")
+
+host = config.get("host") if config.get("host") else "127.0.0.1"
+port = config.get("port") if config.get("port") else 5000
+SERVER_NAME = config.get("domain_name") if config.get("domain_name") else host + ':' + str(port)
+
+app = Flask(__name__)
+app.config['SERVER_NAME'] = SERVER_NAME
+using_ip = host in SERVER_NAME
+
+#log = logging.getLogger('werkzeug')
+#log.disabled = True
+
+
 
 def get_avy(id):
-    bot_token = config.get("token")
+    bot_token = config.get("bot_token")
     if not bot_token:
         raise Exception("Config file missing 'bot_token'.")
-    req = requests.get("https://discord.com/api/users/{id}", headers={"Authorization": f"Bot {bot_token}"})
-    if not req.status_code != 200:
+    req = requests.get(f"https://discord.com/api/users/{id}", headers={"Authorization": f"Bot {bot_token}"})
+    if req.status_code != 200:
         raise Exception(req.status_code)
-    return f"https://images.discordapp.net/avatars/{id}/{req.json()['headers']}.png?size=512"
+    return f"https://images.discordapp.net/avatars/{id}/{req.json()['avatar']}.png?size=512"
 
 @app.errorhandler(404)
 def not_found(e):
     return render_template("warning.html", error="404", message="Seems like you got somewhere you shouldn't be... maybe you should <span><a href='/'>Go Home</a></span>.")
-
-
 
 #@app.after_request
 #def after_request_func(r: Request):
@@ -46,5 +53,9 @@ def stall():
 def projects():
     return render_template("projects.html")
 
+@app.route("/", subdomain="desksword")
+def desksword():
+    return render_template("redirect.html", link="https://discord.gg/c4vWDdd", desc="join my corded disc pls")
+
 if __name__ == '__main__':
-    app.run(config.get("host") if config.get("host") else "127.0.0.1", config.get("port") if config.get("port") else 5000, debug=True)
+    app.run(host, port, debug=True)

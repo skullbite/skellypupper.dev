@@ -2,7 +2,8 @@
   <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css">
-    <script type="text/javascript" src="{{ url_for('static', filename='scripts/stuff.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/stuff.js') }}"></script>
+    <title>Home</title>
   </head>
   <body>
     
@@ -13,7 +14,7 @@
         <div class="info-text">
           <h3>hi, i'm skullbite.</h3>
           <p>i like coding things sometimes<br>I write python and javascript a lot.</p>
-          <a class="fab fa-discord" href="https://discord.gg/c4vWDdd"></a>
+          <a class="fab fa-discord" href="https://{{ 'desksword' + domain_name if using_ip else 'discord.gg/c4vWDdd' }}"></a>
           <a class="fab fa-twitter" href="https://twitter.com/skellypupper"></a>
           <a class="fab fa-github" href="https://github.com/skullbite"></a>
           <a class="fab fa-patreon" href="https://patreon.com/skullbite"></a>

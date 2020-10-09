@@ -1,0 +1,6 @@
+{
+    "bot_token": "<DISCORDBOTTOKENHERE>",
+    "host": "127.0.0.1 (not required)",
+    "port": 5000,
+    "domain_name": "owouwu.xyz"
+}

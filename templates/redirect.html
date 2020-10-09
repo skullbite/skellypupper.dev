@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <title>Redirect</title>
+        <meta property="og:description" content="{{ desc }}" />
+    </head>
+    <body>
+        <div class="center-object">
+            <h1 style="color:green;">Your next destination: Brazil</h1>
+            <p>You will be arriving shortly.</p>
+        </div>
+        <meta http-equiv="refresh" content="5; URL={{ link }}" />
+    </body>
+</html>
