@@ -53,7 +53,7 @@ def stall():
 def projects():
     return render_template("projects.html")
 
-@app.route("/", subdomain="desksword")
+@app.route("/desksword")
 def desksword():
     return render_template("redirect.html", link="https://discord.gg/c4vWDdd", desc="join my corded disc pls")
 

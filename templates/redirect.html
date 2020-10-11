@@ -1,13 +1,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css">
+        <script type="text/javascript" src="{{ url_for('static', filename='js/stuff.js') }}"></script>
+        <script>dots()</script>
         <title>Redirect</title>
         <meta property="og:description" content="{{ desc }}" />
     </head>
     <body>
         <div class="center-object">
-            <h1 style="color:green;">Your next destination: Brazil</h1>
-            <p>You will be arriving shortly.</p>
+            <h1 style="color:green;"><span style="font-size: 29px;color: green;" class="fas fa-plane"></span>Your next destination: Brazil <span style="font-size: 29px;color: green;" class="fas fa-plane"></span></h1>
+            <p>You will be arriving shortly<span id="wait"></span></p>
         </div>
         <meta http-equiv="refresh" content="5; URL={{ link }}" />
     </body>

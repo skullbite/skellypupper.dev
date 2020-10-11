@@ -97,11 +97,7 @@ button {
     text-decoration: underline;
 }
 
-#hibiscus-button, #yoshi-button, #owopup-button, #spooderfy-button {
-    transition: 1s;
-}
-
-#hibiscus-button:hover {transition: 1s;color: var(--hibiscus)}#yoshi-button:hover {transition: 1s;color: var(--yoshi)}#owopup-button:hover {transition: 1s;color: var(--owopup)}#spooderfy-button:hover {transition: 1s;color: var(--spooderfy)}
+#hibiscus-button, #yoshi-button, #owopup-button, #spooderfy-button {transition: 1s;}#hibiscus-button:hover{transition: 1s;color: var(--hibiscus)}#yoshi-button:hover{transition: 1s;color: var(--yoshi)}#owopup-button:hover{transition: 1s;color: var(--owopup)}#spooderfy-button:hover{transition: 1s;color: var(--spooderfy)}
 :root {
     --text: rgb(204, 204, 204);
     --hover-text: rgb(156, 156, 156);
