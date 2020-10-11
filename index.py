@@ -9,7 +9,7 @@ except:
 
 host = config.get("host") if config.get("host") else "127.0.0.1"
 port = config.get("port") if config.get("port") else 5000
-SERVER_NAME = (config.get("domain_name") if config.get("domain_name") else host) + ':' + str(port)
+SERVER_NAME = config.get("domain_name") if config.get("domain_name") else host + ':' + str(port)
 app = Flask(__name__)
 app.config['SERVER_NAME'] = SERVER_NAME
 using_ip = host in SERVER_NAME
