@@ -1,0 +1,6 @@
+{
+    "bot_token": "<DISCORDBOTTOKENHERE>", // REQUIRED: Used to get discord user profile picthre
+    "host": "127.0.0.1", // OPTIONAL: Host IP to connect with
+    "port": 5000, // OPTIONAL: Port to connect with
+    "domain_name": "example.com" // OPTIONAL: Domain name to use in deeper context. Required if you intend to use subdomains.
+} // Remove these comments before using as actual config.
