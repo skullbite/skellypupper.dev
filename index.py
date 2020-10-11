@@ -1,10 +1,11 @@
 from flask import Flask, render_template, url_for, send_file, Request
-import logging, json, requests
+import sys, json, requests
 
 try:
     config = json.load(open("config.json"))
 except:
     print("make a config.json dum dum")
+    sys.exit(0)
 
 host = config.get("host") if config.get("host") else "127.0.0.1"
 port = config.get("port") if config.get("port") else 5000
