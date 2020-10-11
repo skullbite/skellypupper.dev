@@ -9,7 +9,6 @@ except:
 host = config.get("host") if config.get("host") else "127.0.0.1"
 port = config.get("port") if config.get("port") else 5000
 SERVER_NAME = config.get("domain_name") if config.get("domain_name") else host + ':' + str(port)
-
 app = Flask(__name__)
 app.config['SERVER_NAME'] = SERVER_NAME
 using_ip = host in SERVER_NAME
@@ -25,7 +24,7 @@ def get_avy(id):
         raise Exception("Config file missing 'bot_token'.")
     req = requests.get(f"https://discord.com/api/users/{id}", headers={"Authorization": f"Bot {bot_token}"})
     if req.status_code != 200:
-        raise Exception(req.status_code)
+        raise Exception(req.status_code) # TODO: replace with static image.
     return f"https://images.discordapp.net/avatars/{id}/{req.json()['avatar']}.png?size=512"
 
 @app.errorhandler(404)
@@ -58,4 +57,4 @@ def desksword():
     return render_template("redirect.html", link="https://discord.gg/c4vWDdd", desc="join my corded disc pls")
 
 if __name__ == '__main__':
-    app.run(host, port, debug=True)
+    print("Don't run this file. Run 'wsgi.py' instead.")
