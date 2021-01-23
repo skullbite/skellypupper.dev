@@ -56,6 +56,10 @@ async def not_found(e):
 #    print(f"{r.environ['HTTP_X_FORWARDED_FOR']} - {r.full_path}")
 #    return r
 
+@app.route("/favicon.ico")
+async def favicon():
+    return await send_file("static/assets/favicon.ico")
+    
 @app.route("/")
 async def index():
     return await render_template("index.html", avy=await get_avy(158750488563679232))
