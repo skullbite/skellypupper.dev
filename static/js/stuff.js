@@ -1,9 +1,9 @@
-const drop = () => {
+function drop() {
     const things = document.getElementById("drop")
     things.style.display = "block"
 }
 
-const cutie = () => {
+function cutie() {
     let cutieButton = document.getElementById("cutiebutton")
     cutieButton.innerHTML = "Welp. You didn't listen. Now you're a huge cutie. Check your console for more info."
     cutieButton.disabled = true
@@ -25,7 +25,7 @@ const cutie = () => {
     
 }
 
-const dots = () => {window.setInterval(() => {
+function dots() {window.setInterval(() => {
         let wait = document.getElementById("wait")
         if (wait.innerHTML.length > 2) wait.innerHTML = ""
         else wait.innerHTML += "."
