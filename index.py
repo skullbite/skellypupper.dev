@@ -76,9 +76,9 @@ async def projects():
 async def info():
     return await render_template("info.html")
 
-@app.route("/supporters")
+@app.route("/fundme")
 async def supporters():
-    return await render_template("supporters.html", sponsors=await get_supporters())
+    return await render_template("funding.html")
 
 @app.route("/desksword")
 async def desksword():
