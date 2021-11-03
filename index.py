@@ -1,7 +1,5 @@
 from quart import Quart, render_template, url_for, send_file, Request
 import sys, json, aiohttp
-from quart.templating import render_template_string
-from requests.api import get
 
 try:
     config = json.load(open("config.json"))
@@ -41,7 +39,7 @@ async def get_supporters():
         sponsors.append(f"""<div class="smaller-info-box">
             <img draggable="false" src="{x["avatar"]}" />
             <div class="info-text">
-                <p></p><b><i style="margin-right:50px;color:#b805af;">{x["handle"]}</i></span></b></p>
+                <p><b><i style="margin-right:50px;color:#b805af;">{x["handle"]}</i></span></b></p>
             </div>
         </div>""")
     return "\n".join(sponsors)
@@ -82,7 +80,7 @@ async def supporters():
 
 @app.route("/desksword")
 async def desksword():
-    return await render_template("redirect.html", link="https://discord.gg/3uchn9CDN3", desc="join my corded disc pls")
+    return await render_template("redirect.html", link="https://discord.gg/Wr3TF3sMg5", desc="join my corded disc pls")
 
 if __name__ == '__main__':
     print("Don't run this file. Run 'wsgi.py' instead.")
