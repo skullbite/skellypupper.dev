@@ -1,3 +1,4 @@
+> New Version @ https://github.com/Skullbite/skellypupper.dev-next
 # 🌐 skellypupper.dev
 
 hey look at my stupid site
